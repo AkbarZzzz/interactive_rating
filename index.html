@@ -7,7 +7,7 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <link rel="stylesheet" href="style.css" />
-
+ 
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body>
@@ -18,7 +18,7 @@
       <h1>How did we do?</h1>
 
       <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
-
+      <input type="email" id="email" placeholder="Enter your email" />
       <ul>
         <li><button class="btn">1</button></li>
         <li><button class="btn">2</button></li>
@@ -35,10 +35,11 @@
     <!-- Thank you state start -->
 
     <div class="thank-you hidden">
+      <button class="close">X</button>
       <img src="./images/illustration-thank-you.svg" alt="Thanks" />
       <p class="judul">You selected <span id="rating"></span> out of 5</p>
 
-      <h2>Thank you!</h2>
+      <h2 id="thankYouMessage"></h2>
 
       <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
 

@@ -5,7 +5,15 @@ const rateAgain = document.getElementById("rate-again");
 const rating = document.getElementById("rating");
 const rates = document.querySelectorAll(".btn");
 
+function showThankYou() {
+  email = document.getElementById("email").value;
+  thankYouMessage = document.getElementById("thankYouMessage");
+
+  thankYouMessage.innerHTML = "Thank you, " + email + "!";
+}
+
 submitButton.addEventListener("click", () => {
+  showThankYou();
   thanksContainer.classList.remove("hidden");
   mainContainer.style.display = "none";
 });
@@ -20,3 +28,12 @@ rates.forEach((rate) => {
     rating.innerHTML = rate.innerHTML;
   });
 });
+
+const close = document.querySelector(".close");
+const container = document.querySelector(".container");
+container,
+  addEventListener("click", function (e) {
+    if (e.target.className == "close") {
+      e.target.parentElement.style.display = "none";
+    }
+  });
